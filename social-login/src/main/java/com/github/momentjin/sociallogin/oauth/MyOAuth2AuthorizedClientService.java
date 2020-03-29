@@ -31,8 +31,8 @@ public class MyOAuth2AuthorizedClientService implements OAuth2AuthorizedClientSe
         OAuth2AccessToken accessToken = oAuth2AuthorizedClient.getAccessToken();
 
         OAuth2User oauth2User = (OAuth2User) authentication.getPrincipal();
-        String id = String.valueOf(oauth2User.getAttributes().get("id"));
-        String name = (String) ((LinkedHashMap) ((LinkedHashMap) oauth2User.getAttribute("kakao_account")).get("profile")).get("nickname");
+        String id = oauth2User.getName();
+        String name = oauth2User.getAttribute("name");
 
         Member member = new Member(id, name, providerType, accessToken.getTokenValue());
         memberRepository.save(member);

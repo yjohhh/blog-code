@@ -18,8 +18,8 @@ public enum CustomOAuthProvider {
                     .authorizationUri("https://kauth.kakao.com/oauth/authorize")
                     .tokenUri("https://kauth.kakao.com/oauth/token")
                     .userInfoUri("https://kapi.kakao.com/v2/user/me")
-                    .clientId("69779556a1e86bbc4883911ac6062eb8")
-                    .clientSecret("tm0oPlUDEyltKNYEpcjvtse5PGmPz5T5")
+                    .clientId("[your client id]")
+                    .clientSecret("[your client secret]")
                     .userNameAttributeName("id")
                     .clientName("Kakao");
         }
